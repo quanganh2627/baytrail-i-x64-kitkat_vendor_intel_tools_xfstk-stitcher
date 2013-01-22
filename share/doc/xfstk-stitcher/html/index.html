@@ -3,7 +3,7 @@
 <head>
 <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
-<title>xFSTK-Stitcher CLI: xFSTK Cross Platform Firmware &amp; Software Tool Kit-Stitcher Command Line Interface (xfstk-stitcher CLI)</title>
+<title>xFSTK-Stitcher: xFSTK Cross Platform Firmware &amp; Software Tool Kit: Stitcher</title>
 
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <link href="doxygen.css" rel="stylesheet" type="text/css" />
@@ -24,8 +24,8 @@
   
   
   <td style="padding-left: 0.5em;">
-   <div id="projectname">xFSTK-Stitcher CLI
-   &#160;<span id="projectnumber">1.0.5</span>
+   <div id="projectname">xFSTK-Stitcher
+   &#160;<span id="projectnumber">1.2.0</span>
    </div>
    <div id="projectbrief">Intel SoC Cross Platform Firmware &amp; Software Tool Kit</div>
   </td>
@@ -47,7 +47,7 @@
 </div>
 <div class="header">
   <div class="headertitle">
-<div class="title">xFSTK Cross Platform Firmware &amp; Software Tool Kit-Stitcher Command Line Interface (xfstk-stitcher CLI) </div>  </div>
+<div class="title">xFSTK Cross Platform Firmware &amp; Software Tool Kit: Stitcher </div>  </div>
 </div><!--header-->
 <div class="contents">
 <div class="textblock"><p>xFSTK stitcher provides stitching and signing capabilities for firmware and software on Intel SoC platforms. </p>
@@ -55,13 +55,32 @@
 Features</h2>
 <p>xFSTK Stitcher Provides the following features:</p>
 <ul>
-<li>Stitching an Integrated Firmware Image (IFWI) from the following components<ul>
-<li>Pre-Signed SCU_Punit FW</li>
-<li>Pre-Signed SCU ROM patch</li>
-<li>Pre-Signed Upper firmware</li>
-<li>Pre-Signed security firmware</li>
-<li>Pre-Signed video encode/decode (VED) FW</li>
-<li>Pre-Signed MIP</li>
+<li>Stitching an Integrated Firmware Image (IFWI) from the following components:<ul>
+<li>Presigned IA FW</li>
+<li>Presigned MIP</li>
+<li>Presigned SCU and Punit</li>
+<li>Presigned SCU ROM Patch</li>
+<li>Presigned Security Extended FW</li>
+<li>Presigned Security ICache</li>
+<li>Presigned Security Resident Image</li>
+</ul>
+</li>
+<li>Sitching an Unsigned MIP from the following components:<ul>
+<li>Presigned Security Extended FW</li>
+<li>Presigned Security ICache</li>
+<li>Presigned Security Resident Image</li>
+<li>Public Keys</li>
+</ul>
+</li>
+<li>Sitching an Unsigned IA from the following components:<ul>
+<li>Hooks</li>
+<li>IA FW</li>
+<li>IA FW Supplemental</li>
+<li>Presigned SCU and Punit</li>
+<li>Presigned Security Extended FW</li>
+<li>Presigned Security ICache</li>
+<li>Presigned Security Resident Image</li>
+<li>Presigned VED FW</li>
 </ul>
 </li>
 <li>Stitching a single or multi OS image binary</li>
@@ -76,12 +95,13 @@ Features</h2>
 </ul>
 <h2><a class="anchor" id="usage_ref_sec"></a>
 xFSTK Usage</h2>
-<p>Instructions to use the tool are available at <a class="el" href="usage_page.html">xfstk-stitcher Usage</a>.</p>
+<ul>
+<li>Instructions to use the graphical user interface tool: <a class="el" href="gui_usage_page.html">xfstk-stitcher GUI Usage</a>.</li>
+<li>Instructions to use the command line interface tool: <a class="el" href="cli_usage_page.html">xfstk-stitcher CLI Usage</a>.</li>
+</ul>
 <h2><a class="anchor" id="intro_sec"></a>
 Stitching Process Overview</h2>
 <p>The general stitching process consists of combining binaries together, performing calculations to generate header data, and then attaching the header data to the combined components to make an integrated binary image. The process generates an integrated image according to Intel specifications.</p>
-<h3><a class="anchor" id="intro_sec"></a>
-Stitching Process Overview</h3>
 <h3><a class="anchor" id="ifwi_stitch_overview_presigned_images"></a>
 Integrated Firmware Image Stitching with Pre-Signed Firmware Components</h3>
 <p>To stitch an integrated firmware image with Pre-Signed firmware components, the firmware components are input into the tool. The tool combines the components together, adds headers, and adds signatures to create the final firmware image according to the configuration files.</p>
@@ -89,13 +109,16 @@ Integrated Firmware Image Stitching with Pre-Signed Firmware Components</h3>
 <img src="xfstk-stitcher-diagrams.png" alt="xfstk-stitcher-diagrams.png"/>
 <div class="caption">
 Firmware Stitching Overview Diagram - Pre-Signed Upper Firmware</div></div>
-   <h3><a class="anchor" id="ifwi_stitch_overview_presigned_images"></a>
-Integrated Firmware Image Stitching with Pre-Signed Firmware Components</h3>
-</div></div><!-- contents -->
+  </div></div><!-- contents -->
+<DIV ID="footer">
+        <p align="center">
+           &copy Intel Corporation 2012
+        </p>
+</DIV>        
 
 
 <hr class="footer"/><address class="footer"><small>
-Generated on Thu May 24 2012 10:44:38 for xFSTK-Stitcher CLI by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Mon Jan 7 2013 13:22:50 for xFSTK-Stitcher by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.7.6.1
 </small></address>

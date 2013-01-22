@@ -6,5 +6,11 @@ PlatformType = MFDD1
 ImageType = OSUSB
 'ImageName is the Output Filename 
 ImageName = ./Medfield_OS_USB.bin
+
+platformXML = ./OS.xml
+
+osLoadAddress = 0xFFFFFFFF
+osStorageAddress = 0x011002D8
+osPassphrase = 1234567890
 '
 ' End of file

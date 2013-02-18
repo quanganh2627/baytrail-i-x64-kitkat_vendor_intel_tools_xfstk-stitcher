@@ -1,0 +1,9 @@
+LOCAL_PATH:= $(call my-dir)
+
+include $(CLEAR_VARS)
+
+LOCAL_PREBUILT_EXECUTABLES := bin/xfstk-stitcher
+LOCAL_MODULE_CLASS := EXECUTABLES
+LOCAL_IS_HOST_MODULE := true
+
+include $(BUILD_MULTI_PREBUILT)

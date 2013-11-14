@@ -1,0 +1,25 @@
+'Merrifield Configuration File
+'--validValues = MRFLDB0
+PlatformType = MRFLDB0
+
+'--validValues = FWUSB OSUSB
+ImageType = OSUSB
+
+'--ImageName is the OUTPUT filename for IFWI or OS
+ImageName = boot.img
+
+'-- Platform XML file, includes UMIP, smip device and non-device (-k) --
+platformXML = kernel.xml
+
+'----------------- PEM Files (These are the files containing the Public and Private Keys)
+
+Key7 = 7
+
+keyLocation = 3
+enableKeyCache = 0
+signingServerConfigFile = vendor/intel/fw/PRIVATE/ifwi/common/keys/ProductionSigningServerConfig.ini
+pkcs12StorageFile = CI_Key.key
+spid = 000000000800040000000100
+
+osLoadAddress = 0xFFFFFFFF
+osStorageAddress = 0x01100000

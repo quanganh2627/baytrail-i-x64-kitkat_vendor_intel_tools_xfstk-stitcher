@@ -1,0 +1,20 @@
+#!/bin/bash
+XFSTKDIR=${ANDROID_BUILD_TOP}/vendor/intel/tools/xfstk-stitcher
+WORK=${ANDROID_HOST_OUT}/xfstk
+ARGS=$*
+PROD_OUT=$(dirname $2)
+mkdir -p $WORK
+
+# extract binary packages into workdir
+if [[ ! -d $WORK/usr ]] ; then
+    for deb in ${XFSTKDIR}/deb/*.deb
+    do
+    echo extracting $deb
+    dpkg -x $deb $WORK
+    done
+fi
+export PATH=$WORK/usr/bin:$PATH
+export LD_LIBRARY_PATH=$WORK/usr/lib/xfstk/stitcher_token_lib:$WORK/usr/lib/xfstk/stitcher_common_lib:$WORK/usr/lib/xfstk/stitcher_msl_lib:$WORK/usr/lib/xfstk/stitcher-ui-plugins
+mkdir -p $PROD_OUT/logs
+export AXIS2C_HOME=$PROD_OUT
+${XFSTKDIR}/xfstk-stitcher-external $ARGS

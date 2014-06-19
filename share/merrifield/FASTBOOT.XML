@@ -15,7 +15,7 @@
        <image_attributes>14</image_attributes>
        <image_filepath>boot.unsigned</image_filepath>
        <is_image_signed>1</is_image_signed>
-       <starting_LBA_in_512_byte_blocks>0</starting_LBA_in_512_byte_blocks>
+       <starting_LBA_in_512_byte_blocks>50</starting_LBA_in_512_byte_blocks>
        <is_partition>0</is_partition>
        <partition_status>0</partition_status>
        <partition_type>0</partition_type>
